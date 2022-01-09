@@ -12,7 +12,7 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  final TextEditingController _iDController = TextEditingController();
+  final TextEditingController _EmailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
@@ -55,7 +55,7 @@ class _LoginState extends State<Login> {
               children: <Widget>[
                 TextFormField(
                     keyboardType: TextInputType.number,
-                    controller: _iDController,
+                    controller: _EmailController,
                     decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: 'Campus ID',
@@ -103,8 +103,7 @@ class _LoginState extends State<Login> {
 
   _signInWithIdAndPassword() async {
     try {
-      final user = (await _firebaseAuth._signInWithIdAndPassword(
-          Id: _iDController.text.trim(),
+      final user = (await _firebaseAuth.signInWithEmailAndPassword(email: _EmailController.text.trim(),
           password: _passwordController.text.trim()));
       if (user != null) {
         void setState() {
