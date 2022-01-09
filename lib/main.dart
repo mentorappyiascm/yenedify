@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'Screens/splash_screen.dart';
 
 
@@ -16,3 +17,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
