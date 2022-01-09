@@ -1,6 +1,6 @@
 # yenedify
 
-A new Flutter project.
+College Project Of @YIASCM 2019-22 batch
 
 ## Getting Started
 
