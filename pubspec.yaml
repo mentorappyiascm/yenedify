@@ -22,7 +22,6 @@ environment:
 
 dependencies:
   google_fonts: ^2.2.0
-  flutter_spinkit: 5.0.0
   firebase: ^9.0.2
   firebase_auth: ^3.3.5
   flutter:
