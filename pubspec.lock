@@ -129,9 +129,9 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_spinkit
-      url: "https://pub.flutter-io.cn"
+      url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.0.0"
+    version: "5.1.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -351,5 +351,9 @@ packages:
     source: hosted
     version: "0.2.0"
 sdks:
+<<<<<<< HEAD
+  dart: ">=2.14.0 <3.0.0"
+=======
   dart: ">=2.13.0 <3.0.0"
+>>>>>>> 3ef35fb3db484000f13ddfa0b7f6bc4fb27c8954
   flutter: ">=2.0.0"

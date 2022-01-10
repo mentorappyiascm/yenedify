@@ -2,10 +2,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+
 import 'package:flutter/widgets.dart';
 import 'package:form_validator/form_validator.dart';
 import 'package:google_fonts/google_fonts.dart';
 import  '../Utilities/kConstants.dart';
+
+import 'package:yenedify/forgotpass.dart';
+
+import 'Home.dart';
+
 
 class Login extends StatefulWidget {
   @override
@@ -19,6 +25,7 @@ class _LoginState extends State<Login> {
   // final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
   @override
+
   // Widget topback = Scaffold(
   //   backgroundColor: Colors.black,
   //   body: Center(
@@ -194,6 +201,11 @@ class _LoginState extends State<Login> {
                 ),
               ),
 
+
+
+ 
+
+  
             ),
             ),
 
@@ -210,6 +222,7 @@ class _LoginState extends State<Login> {
       ),
     );
   }
+
 
   // _signInWithIdAndPassword() async {
   //   try {
@@ -228,4 +241,24 @@ class _LoginState extends State<Login> {
   //     Fluttertoast.showToast(msg: e.toString());
   //   }
   // }
+
+  _signInWithEmailAndPassword() async {
+    try {
+      final user = (await _firebaseAuth.signInWithEmailAndPassword(
+          email: _EmailController.text.trim(),
+          password: _passwordController.text.trim()));
+      if (user != null) {
+        void setState() {
+          Fluttertoast.showToast(msg: "Signed In Sucessfully");
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => HomePage()),
+          );
+        }
+      }
+    } catch (e) {
+      Fluttertoast.showToast(msg: e.toString());
+    }
+  }
+
 }
