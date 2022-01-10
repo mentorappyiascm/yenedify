@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'main_login_page.dart';
+import 'Home.dart';
 
 
 class loading_Screen extends StatefulWidget {
@@ -16,7 +16,7 @@ class _loading_ScreenState extends State<loading_Screen> {
   void initState(){
     super.initState();
     Timer(Duration(seconds: 4),(){
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => main_login()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => HomePage()));
     });
 
   }

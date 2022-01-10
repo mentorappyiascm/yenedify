@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:yenedify/forgotpass.dart';
 //import 'package:flutter/widgets.dart';
 //import 'package:form_validator/form_validator.dart';
 import 'forgotpass.dart';
@@ -13,7 +14,7 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _EmailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
@@ -57,7 +58,7 @@ class _LoginState extends State<Login> {
               children: <Widget>[
                 TextFormField(
                     keyboardType: TextInputType.number,
-                    controller: _emailController,
+                    controller: _EmailController,
                     decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: 'Campus ID',
@@ -125,7 +126,7 @@ class _LoginState extends State<Login> {
   _signInWithEmailAndPassword() async {
     try {
       final user = (await _firebaseAuth.signInWithEmailAndPassword(
-          email: _emailController.text.trim(),
+          email: _EmailController.text.trim(),
           password: _passwordController.text.trim()));
       if (user != null) {
         void setState() {
