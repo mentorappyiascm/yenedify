@@ -8,7 +8,7 @@ import 'package:form_validator/form_validator.dart';
 
 import '../Utilities/kConstants.dart';
 
-import 'package:yenedify/forgotpass.dart';
+import 'package:yenedify/Screens/forgotpass.dart';
 
 import 'Home.dart';
 
