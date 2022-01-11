@@ -24,8 +24,8 @@ class kButton extends StatelessWidget {
             style: GoogleFonts.poppins(color: Colors.white54, fontSize: 16),
           ),
         ),
-        onTap: () {
-          onpress;
-        });
+        onTap:
+          onpress,
+        );
   }
 }
