@@ -13,14 +13,14 @@ class kButton extends StatelessWidget {
     return GestureDetector(
         child: Container(
           alignment: Alignment.center,
-          height: 30,
+          height: 33,
           width: 100,
           decoration: BoxDecoration(
             color: Color(0xBA01979F),
             borderRadius: BorderRadius.circular(5),
           ),
           child: Text(
-            'LOGIN',
+            label,
             style: GoogleFonts.poppins(color: Colors.white54, fontSize: 16),
           ),
         ),

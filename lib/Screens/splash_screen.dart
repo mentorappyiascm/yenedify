@@ -18,19 +18,16 @@ class _loading_ScreenState extends State<loading_Screen> {
     Timer(Duration(seconds: 4),(){
       Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => Login()));
     });
-
   }
 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Color(0xFF1A1A4E),
         body:
         Center(
-            child : SpinKitWanderingCubes(
-
-
+            child : SpinKitSquareCircle(
               color: Colors.white,
               // size: 70.0,
             )
