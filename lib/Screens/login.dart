@@ -51,8 +51,14 @@ class _LoginState extends State<Login> {
                 flex: 5,
                 child:
                 //   Top part
-                Container(
-                  // color: Colors.red,
+                Center(
+                  child: Container(
+                    // color: Colors.red,
+                    child:Image( image: AssetImage(
+                      'images/Logo.png'
+                    ),)
+
+                  ),
                 ),
               ),
 

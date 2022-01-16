@@ -118,10 +118,9 @@ class _Signup2State extends State<Signup2> {
                                                     style: ButtonStyle(
                                                         backgroundColor: MaterialStateProperty.all<Color>(Colors.black38)
                                                     ),
-                                                    onPressed: () => Navigator.push(context,
-                                                        MaterialPageRoute(builder: (context)
-                                                        { return HomePage();}
-                                                        )),
+                                                    onPressed: () { Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context){
+                                                      return HomePage();
+                                                    }), (_) => false);},
                                                     child: const Text('Confirm',
                                                       style: TextStyle(
                                                           color: Colors.white70

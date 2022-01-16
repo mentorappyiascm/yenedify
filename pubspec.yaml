@@ -21,6 +21,9 @@ environment:
   sdk: ">=2.13.0 <3.0.0"
 
 dependencies:
+  table_calendar: ^3.0.3
+  flutter_icons: ^1.1.0
+  draggable_home: ^1.0.2
   google_fonts: ^2.2.0
   firebase: ^9.0.2
   firebase_auth: ^3.3.5
@@ -58,9 +61,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

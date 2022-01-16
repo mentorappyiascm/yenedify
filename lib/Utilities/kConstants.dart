@@ -16,7 +16,7 @@ class kButton extends StatelessWidget {
           height: 33,
           width: 100,
           decoration: BoxDecoration(
-            color: Color(0xBA01979F),
+            color: Color(0xFF007AFF),
             borderRadius: BorderRadius.circular(5),
           ),
           child: Text(
