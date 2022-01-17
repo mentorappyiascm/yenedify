@@ -1,7 +1,8 @@
+// @dart=2.9
+
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'Screens/login.dart';
 import 'Screens/splash_screen.dart';
+import 'dart:ui';
 
 void main() {
   runApp(MyApp());
@@ -12,7 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Yenedify',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(
+        primaryColor: Colors.black,
+      backgroundColor: Colors.black),
       home: loading_Screen(),
     );
   }
